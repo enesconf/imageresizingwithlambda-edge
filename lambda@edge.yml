@@ -275,8 +275,9 @@ Resources:
           - Action: sts:AssumeRole
             Effect: Allow
             Principal:
-              Service: edgelambda.amazonaws.com
-
+              Service: 
+               - lambda.amazonaws.com
+               - edgelambda.amazonaws.com
         Version: "2012-10-17"
       Path: /
       Policies:
@@ -690,7 +691,9 @@ Resources:
           - Action: sts:AssumeRole
             Effect: Allow
             Principal:
-              Service: edgelambda.amazonaws.com
+              Service: 
+               - lambda.amazonaws.com
+               - edgelambda.amazonaws.com
         Version: "2012-10-17"
       Path: /
       Tags:
